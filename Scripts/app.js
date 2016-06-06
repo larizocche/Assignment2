@@ -16,6 +16,7 @@
 (function () {
     "use strict";
 
+
     /**
      * This variable define an array of HTML elements. Each element has a number, known as an index, it represents the element's position within the array.
      * */
@@ -30,7 +31,6 @@
     resume[5] = document.getElementById("researchDescription");
     resume[6] = document.getElementById("researchDescription2");
     resume[7] = document.getElementById("researchDescription3");
-
 
     /**
      * This variable define the resume array
@@ -53,11 +53,42 @@
     resumeData[7] = "<span class='title'>Functional Outcome of Bone Marrow Stem Cells (CD45+/CD34−) After Cell Therapy in Acute Spinal Cord Injury: In Exercise Training and in Sedentary Rats. </span><br> Authors: Carvalho, K. A. T.; Cunha, R. C.; Vialle E.N; Osiecki, R.; Moreira, GHG; Simeoni, R. B.; Francisco, J. C.; Guarita-Souza, L. C.; Oliveira, L.; Zocche, Larissa; Olandoski, M.";
 
 
+
+
+//create a reference to the sendButton
+var sendButton = document.getElementById ("sendButton");
+//cancel the default behaviour of the button
+sendButton.addEventListener("click", sendButtonClick);
+
+function sendButtonClick(event){
+    console.log("clicked");
+}
+
+//create a reference to the firstName field
+var firstName = document.getElementById ("firstName");
+
+//create a reference to the form
+var contactForm = document.getElementById ("contactForm");
+
+contactForm.addEventListener ("submit", function (event){
+    event.preventDefault();
+    console.log("submitted");
+    showFormInput();
+    contactForm.reset();
+});
+function showFormInput(){
+    console.log("*******************************")
+    console.log("First Name: " + firstName.value);
+    console.log("Last Name: " + lastName.value);
+    console.log("*******************************")
+}
+
+
     var resumeLength = resume.length - 1;
     // check to see if the data exists
     for (var index = resumeLength; index >= 0; index--) {
         //inject html tags along with the text
-           console.log("JavaScript working"); 
+           
         if (resume[index]) {
             resume[index].innerHTML = resumeData[index];
         }
