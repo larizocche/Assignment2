@@ -81,8 +81,8 @@ function showFormInput(){
     console.log("First Name: " + firstName.value);
     console.log("Last Name: " + lastName.value);
     console.log("E-mail: " + email.value);
-    console.log("E-mail: " + contactNumber.value);
-    console.log("E-mail: " + message.value);
+    console.log("Contact number: " + contactNumber.value);
+    console.log("Message: " + message.value);
     console.log("*******************************")
 }
 
