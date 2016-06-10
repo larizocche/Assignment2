@@ -4,7 +4,7 @@
 * @date: June 10, 2016
 *
 * Student # : 300870340
-* WebSite: http://COMP125-Assignment2.azurewebsites.net/
+* WebSite: http://COMP125Assignment2.azurewebsites.net/
 *
 * @description: This is the main JavaScript file for this website.
 */
